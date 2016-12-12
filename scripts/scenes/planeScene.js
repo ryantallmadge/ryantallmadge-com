@@ -20,7 +20,7 @@ function PlaneScene(){
         draw : function(){
             planeX = planeX - planeMovmentSpeed
             if(planeX <= -100){
-                planeX = canvas.width + 200
+                planeX = canvas.width + Math.floor(Math.random() * (2000 - 200) + 200)
                 planeY = Math.floor(Math.random() * canvas.height / 3)
                 arrowUpDown = 0
             }
