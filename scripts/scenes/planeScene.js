@@ -46,7 +46,7 @@ function PlaneScene(){
             context.fillRect(x,y - 10, 100, 20 )
             
             context.fillStyle = "black"
-            context.fillRect(x,y - 10, 10, 10 )
+            context.fillRect(x,y - 10, 15, 5 )
             context.save()
         
         ;(function(){

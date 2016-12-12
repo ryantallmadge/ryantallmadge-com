@@ -45,9 +45,9 @@ var SkyScene = function(){
         drawCircle(-10, -10,120)
 
         clouds.forEach(function(cloud){
-            var xStart = cloud.x  + mouseXMovement
-            cloud.x = cloud.x - cloud.speed
-            if(cloud.x + 100 <= 0) cloud.x = canvas.width + 100
+            var xStart = cloud.x  - mouseXMovement
+            cloud.x = cloud.x + cloud.speed
+            if(cloud.x - 100 >= canvas.width) cloud.x = -100
             var yStart = cloud.y + mouseYMovement
 
             context.fillStyle = "rgba(0,0,0,0.5)"
