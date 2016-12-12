@@ -31,27 +31,33 @@ setCanvas()
 requirejs([
     "scenes/skyScene",
     "scenes/grassScene",
-    "scenes/comingSoonScene"
+    "scenes/comingSoonScene",
+    "scenes/planeScene"
     ],function(
         SkyScene, 
         GrassScene,
-        ComingSoonScene
+        ComingSoonScene,
+        PlaneScene
     ){
 
 
 function drawScene(scenes){
-    setCanvas()
-    if(!Array.isArray(scenes)){
-        console.error("Must have an array of scenes to render")
-        return;
-    }
     context.clearRect(0, 0, canvas.width, canvas.height)
     scenes.forEach(function(scene){
         scene.draw()
     })
 }
 
-var scenes = [new SkyScene(), new GrassScene(), new ComingSoonScene()]
+var scenes = [new SkyScene(), new GrassScene(), new PlaneScene()]
+WebFontConfig = {
+    active: function(){
+        scenes.push(new ComingSoonScene())
+    },
+    google: {
+        families: ['Pacifico']
+    }
+}
+WebFont.load(WebFontConfig);
 //drawScene(scenes)
 function startScene(){
     setTimeout(function(){
@@ -61,12 +67,6 @@ function startScene(){
         })
     },frameRate)
 }
-    WebFontConfig = {
-        active: startScene,
-        google: {
-            families: ['Pacifico']
-        }
-    }
-    WebFont.load(WebFontConfig);
 
+startScene()
 })

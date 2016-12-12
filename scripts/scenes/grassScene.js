@@ -12,11 +12,6 @@ define(function(){
         });
 
         function drawGrass() {
-            // context.fillStyle = colors.darkGrass
-            // context.beginPath()
-            // context.arc(canvas.width / 2, canvas.height - (canvas.height /  3) - 3 + canvas.width, canvas.width, 0, Math.PI, true )
-            // context.fill()
-
             context.fillStyle = colors.grass
             context.beginPath()
             context.arc(canvas.width / 2, canvas.height - (canvas.height /  3) + canvas.width, canvas.width, 0, Math.PI, true )
