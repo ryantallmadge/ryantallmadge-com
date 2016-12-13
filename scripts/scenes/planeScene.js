@@ -35,7 +35,7 @@ function PlaneScene(){
             context.arc(x + 100, y, 7, 0, Math.PI * 2, true )
             context.fill()
 
-            context.fillStyle = "blue"
+            context.fillStyle = colors.plane
             context.beginPath()
             context.moveTo(x,y - 10)
             context.lineTo(x - 20, y + 10)
@@ -60,7 +60,7 @@ function PlaneScene(){
             context.translate( x+width/2, y+height/2 )
             context.rotate(-65*Math.PI/180)
             context.rect( -width/2, -height/2, width,height)
-            context.fillStyle = "blue"
+            context.fillStyle = colors.plane
             context.fill()
         })()
         context.restore()
@@ -75,7 +75,7 @@ function PlaneScene(){
             context.translate( x+width/2, y+height/2 )
             context.rotate(65*Math.PI/180)
             context.rect( -width/2, -height/2, width,height)
-            context.fillStyle = "blue"
+            context.fillStyle = colors.plane
             context.fill()
         })()
 

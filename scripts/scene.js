@@ -3,7 +3,8 @@ var colors = {
     clouds      : "rgb(255, 255, 255)",
     grass       : "rgb(1, 166, 17)",
     darkGrass   : "rgb(0, 92, 9)",
-    randomGreen : ["rgb(0,92,9)","rgb(0,104,10)","rgb(0,123,12)", "rgb(1,142,14)"]
+    randomGreen : ["rgb(0,92,9)","rgb(0,104,10)","rgb(0,123,12)", "rgb(1,142,14)"],
+    plane       : "rgb(127, 133, 131)"
 }
 
 var canvas      = document.getElementById("scene")
