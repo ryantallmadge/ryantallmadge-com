@@ -4,7 +4,7 @@ function ComingSoonScene(){
     return {
         draw : function(){
             context.fillStyle = "white"
-            context.font = "3em 'Pacifico', 'cursive'";
+            context.font = "2.5em 'Press Start 2P', 'cursive'";
             context.textBaseline = "top"
             context.textAlign = "center"
             context.fillStyle = "black"
@@ -12,7 +12,7 @@ function ComingSoonScene(){
 
             context.fillStyle = "white"
             context.fillText("Ryan Tallmadge", canvas.width / 2, canvas.height / 2);
-            context.font = "1.5em 'Arial'";
+            context.font = "1.5em 'Press Start 2P'";
             context.fillText("Coming Soon", canvas.width / 2, canvas.height / 2 + 70);
         }
     }

@@ -55,7 +55,7 @@ WebFontConfig = {
         scenes.push(new ComingSoonScene())
     },
     google: {
-        families: ['Pacifico']
+        families: ['Pacifico','Press Start 2P']
     }
 }
 WebFont.load(WebFontConfig);
