@@ -1,24 +1,35 @@
-define(function(){
+define(function() {
+  function ComingSoonScene(canvas) {
+    let showNameCount = 40
+    let startLetter = 0
+    const name = 'Ryan Tallmadge'
 
-function ComingSoonScene(){
-    return {
-        draw : function(){
-            context.fillStyle = "white"
-            context.font = "2.5em 'Press Start 2P', 'cursive'";
-            context.textBaseline = "top"
-            context.textAlign = "center"
-            context.fillStyle = "black"
-            context.fillText("Ryan Tallmadge", canvas.width / 2 + 1, canvas.height / 2 + 2);
-
-            context.fillStyle = "white"
-            context.fillText("Ryan Tallmadge", canvas.width / 2, canvas.height / 2);
-            context.font = "1.5em 'Press Start 2P'";
-            context.fillText("Coming Soon", canvas.width / 2, canvas.height / 2 + 70);
+    function showName() {
+      if (showNameCount) {
+        showNameCount--
+        return showNameCount % 5 === 0 ? '' : '|'
+      }
+      if (startLetter < name.length) {
+        let returnName = ''
+        for (let i = 0; i < startLetter; i++) {
+          returnName += name[i]
         }
+        startLetter++
+        return returnName + '|'
+      }
+      return name
     }
-}
 
-return ComingSoonScene
+    return {
+      draw: context => {
+        const name = showName()
 
+        context.fillStyle = 'white'
+        context.font = "1em 'Press Start 2P'"
+        context.fillText(name, canvas.width - 250, canvas.height - 50)
+      }
+    }
+  }
 
+  return ComingSoonScene
 })
